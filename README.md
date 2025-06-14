@@ -2,11 +2,11 @@
 
 This is a lightweight Python automation tool that generates professional bid/proposal letters in `.docx` format. It takes structured data from a YAML file and fills a Word template with that information using placeholder rendering.
 
-This is my **first ever project on GitHub** 🚀 — built to automate tender documentation tasks!
+This is my **first ever project on GitHub** — built to automate tender documentation tasks!
 
 ---
 
-## 🔧 What It Does
+## What It Does
 
 - Reads data from a YAML file (like tender name, bidder name, to-do list)
 - Determines what kind of document needs to be generated
@@ -16,7 +16,7 @@ This is my **first ever project on GitHub** 🚀 — built to automate tender do
 
 ---
 
-## 🗂 Folder Structure
+## Folder Structure
 
 ```
 bid-proposal-generator/
@@ -35,7 +35,7 @@ bid-proposal-generator/
 
 ---
 
-## ▶ How to Run
+## How to Run
 
 1. Clone the repo:
    ```bash
@@ -65,7 +65,7 @@ bid-proposal-generator/
 5. Output document appears in the `output/` folder.
 
 
-## 💬 Connect
+## Connect
 **Prasshant Rana** 
-Feel free to connect on [LinkedIn]https://www.linkedin.com/in/prasshant-rana-30b5881a7/ or contribute ideas to improve it!
+Feel free to connect on https://www.linkedin.com/in/prasshant-rana-30b5881a7/ or contribute ideas to improve it!
  
