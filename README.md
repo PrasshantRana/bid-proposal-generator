@@ -1,5 +1,4 @@
-# 🧾 Bid Proposal Generator (YAML → DOCX)
-
+# Bid Proposal Generator 
 This is a lightweight Python automation tool that generates professional bid/proposal letters in `.docx` format. It takes structured data from a YAML file and fills a Word template with that information using placeholder rendering.
 
 This is my **first ever project on GitHub** — built to automate tender documentation tasks!
