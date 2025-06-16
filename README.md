@@ -7,29 +7,53 @@ This is my **first ever project on GitHub** — built to automate tender documen
 
 ## What It Does
 
-- Reads data from a YAML file (like tender name, bidder name, to-do list)
-- Determines what kind of document needs to be generated
-- Builds a professional proposal letter body
-- Fills a Word `.docx` template with the content
-- Outputs the final document to a specified folder
+1. Loads structured YAML input
+      Reads key information like:
+         Task to perform (to_do_task)
+         Tender details (tender.name, tender.bid_tender_no, etc.)
+         Bidder profile and team (bidder.name, bidder.key_personnel.name, etc.)
 
+2. Flattens nested YAML keys
+      Nested keys like bidder.key_personnel.name are flattened into dot notation for easy access during selection.
+
+3. Selects relevant fields using AI (Mistral model)
+      The prompt_builder.py constructs a prompt asking the AI model (Using ctransformers) to pick only the YAML fields needed for the task (e.g. “Write a bid submission letter”).
+
+4. Generates the letter body using AI (Mistral model)
+      Using ctransformers, a prompt is sent to the Mistral model with the filtered YAML data. The model generates a clean, formal paragraph for the main body.
+
+5. Fills a Word .docx template
+      The generated letter body and other fields (like date, tender name, etc.) are inserted into a Word document using docxtpl and {{placeholder}} tags.
+
+6. Exports the final document
+      The completed proposal letter is saved to the /output/ directory, ready to send or upload.
 ---
 
 ## Folder Structure
 
 ```
 bid-proposal-generator/
-├── main.py               # Entry point – calls all other modules
-├── ai_writer.py          # Generates the main letter body from YAML data
-├── doc_writer.py         # Renders a .docx using docxtpl
-├── yaml_utils.py         # Loads YAML data
-├── input/                # YAML instruction files
-│   └── instructions.yaml
-├── templates/            # Word template files with {{placeholders}}
-│   └── sample_template.docx
-├── output/               # Final generated .docx documents
+├── main.py
+├── README.md
 ├── requirements.txt
-└── README.md
+│
+├── input/
+│   └── data_file.yaml
+│
+├── output/
+│   └── output.docx
+│
+├── templates/
+│   └── sample_format.docx
+│
+├── utils/
+   ├── ai_writer.py
+   ├── data_utils.py
+   ├── doc_writer.py
+   ├── model_loader.py
+   ├── prompt_builder.py
+   └── yaml_loader.py
+
 ```
 
 ---
@@ -38,7 +62,8 @@ bid-proposal-generator/
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/your-username/bid-proposal-generator.git cd bid-proposal-generator
+   git clone https://github.com/your-username/bid-proposal-generator.git
+   cd bid-proposal-generator
    ```
 
 2. Install dependencies:
@@ -46,7 +71,7 @@ bid-proposal-generator/
    pip install -r requirements.txt
    ```
 
-3. Add your input YAML in `input/instructions.yaml`  
+3. Add your input YAML in `input/data_file.yaml`  
    Example:
    ```yaml
    to_do:
@@ -55,14 +80,14 @@ bid-proposal-generator/
    tendering_authority: "Department of Education"
    bidder_name: "KompanionsX"
    ```
+4. Open utils/prompt_builder.py to edit how the AI is instructed:
+   build_key_selection_prompt() — Adjust which YAML fields are considered important for the task.
+   build_letter_body_prompt() — Change tone, formatting, or structure of the letter.
 
-4. Run the program:
+5. Run the program:
    ```bash
    python main.py
    ```
-
-5. Output document appears in the `output/` folder.
-
 
 ## Connect
 **Prasshant Rana** 
