@@ -1,3 +1,5 @@
 docxtpl
 pyyaml
 
+"ctransformers" 
+"python-docx" 
