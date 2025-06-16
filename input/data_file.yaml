@@ -1,0 +1,65 @@
+# -------------------------------
+# To Do Task
+# -------------------------------
+to_do_task:
+  letter_name: "E-Learning Deployment Proposal"
+
+# -------------------------------
+# Subject
+# -------------------------------
+subject: "Proposal for Implementation of Smart Education Platform Across 50 Government Schools"
+
+# -------------------------------
+# TENDER DETAILS
+# -------------------------------
+tender:
+  bid_tender_no: "GEM/2025/B/7894561"
+  work_item: "Deployment of Smart Education Platform with AR-based Science and Math Curriculum"
+  tendering_organisation: "Department of School Education & Literacy"
+  tender_category: "Service - Digital Learning Implementation"
+  mode_of_bidding: "Online Single-Stage"
+  bid_type: "Technical Bid Only"
+  publish_date: "2025-05-10"
+  bid_opening_date: "2025-06-25"
+  bid_closing_date: "2025-06-22"
+  evaluation_criteria: "Technical Eligibility and Experience"
+  consignee_address: "Director, ICT in Schools,Education Block, New Delhi, India - 110001"
+  contact_person: "Mr. Arun Kumar"
+  contact_email: "arun.kumar@edumin.gov.in"
+
+# -------------------------------
+# BIDDER / COMPANY DETAILS
+# -------------------------------
+bidder:
+  name: "LearnSphere Technologies Pvt Ltd"
+  established: 2015
+  location: "Hyderabad, Telangana"
+  profile: >
+    LearnSphere is a pioneer in AR/VR-enhanced education solutions. We specialize in delivering interactive learning modules aligned to NCERT and state boards through immersive smart classroom kits and cloud-based dashboards.
+  expertise:
+    - Supplied AR-based STEM kits to 700+ government schools across 8 states
+    - Developed gamified science curriculum in 10 regional languages
+    - Partnered with NGOs and state governments for digital inclusion projects
+  certifications:
+    - Startup India Certified
+    - ISO 21001:2018 (Education Management Systems)
+  technologies:
+    - ARKit, WebXR, Unity3D, Moodle LMS
+    - Tablet + Projector + Local Server Compatible
+  key_personnel:
+    name: "Ankita Joshi"
+    role: "Program Director - Govt Projects"
+    phone: "+91-9988776655"
+    email: "ankita.j@learnsphere.in"
+  contact:
+    email: "info@learnsphere.in"
+    phone: "+91-8800880088"
+    website: "https://learnsphere.in"
+    linkedin: "https://linkedin.com/company/learnsphere"
+
+# -------------------------------
+# PROPOSAL DETAILS
+# -------------------------------
+submission_date: "2025-06-14"
+
+
